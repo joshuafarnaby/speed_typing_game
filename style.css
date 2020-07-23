@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  background-color: rgb(50, 99, 172);
+  background-color: rgb(138, 200, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.start-difficulty {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  z-index: 1;
+}
+
+.start-difficulty.start {
+  opacity: 0;
+  /* z-index: -1; */
+  transition: opacity 0.5s ease-in;
+}
+
+.start-btn {
+  border: 0;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.start-btn:hover,
+.restart-btn:hover {
+  transform: scale(1.02);
+}
+
+.start-btn:focus,
+.restart-btn:focus {
+  outline: 0;
+}
+
+.diff-select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.diff-select select {
+  margin-left: 10px;
+  border: 0;
+  border-radius: 4px;
+  padding: 5px;
+  /* display: inline-block; */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.diff-select select:focus {
+  outline: 0;
+}
+
+.game-container {
+  position: relative;
+  background-color: rgb(73, 117, 184);
+  color: #fff;
+  width: 500px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.game-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.user-input {
+  border: 0;
+  border-radius: 3px;
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.user-input:focus {
+  outline: 0;
+}
+
+.endgame-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 0;
+  z-index: -1;
+}
+
+.endgame-container.end {
+  opacity: 1;
+  z-index: 1;
+  transition: opacity 0.2s ease-in;
+}
+
+.restart-btn {
+  border: 0;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
